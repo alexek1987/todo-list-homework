@@ -12,8 +12,7 @@ function useQuote() {
           .then((result) => result.json())
           .then((data) => {
             const randomQuote = Math.floor(Math.random() * data.length)
-            console.log(data[randomQuote].text);
-              setQuote(data[randomQuote]);
+            setQuote(data[randomQuote]);
 
         });
       fetchQuote();
