@@ -4,7 +4,7 @@ import './Todo.css';
 import db from "./firebase"
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import { makeStyles } from '@material-ui/core/styles';
-import { useQuote } from "./useQuote";
+import useQuote from "./useQuote";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -20,9 +20,10 @@ const useStyles = makeStyles((theme) => ({
 
 
 
+
 function Todo(props) {
 
-  const [quote, setQuote] = useState({});
+  const addQuote = useQuote("")
   const customStyle = useStyles();
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState();
@@ -70,7 +71,7 @@ function Todo(props) {
       <ListItem className="todo__li">
         <ListItemText
           primary={props.todo.todo}
-          secondary={quote.text + '- ' + quote.author}/>
+          secondary={addQuote.text + '- ' + addQuote.author}/>
       </ListItem>
       <Button
         variant="contained"

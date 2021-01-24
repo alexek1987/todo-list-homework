@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 
 function useQuote() {
-
   const [quote, setQuote] = useState({});
+
 
     useEffect(() => {
       const fetchQuote = async () =>

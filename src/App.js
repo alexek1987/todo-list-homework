@@ -23,11 +23,11 @@ function App() {
 
   const addTodo = (event) => {
     event.preventDefault();
-    db.collection('todos').add({
+    db.collection("todos").add({
     todo: input.charAt(0).toUpperCase() + input.substring(1, input.length),
     timestamp: firebase.firestore.FieldValue.serverTimestamp()
   })
-  setInput('');
+  setInput("");
   }
 
   return (
