@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import './Todo.css';
 import Todo from './Todo.js';
 import { Button, FormControl, Input, InputLabel } from '@material-ui/core';
 import db from './firebase';
@@ -30,7 +31,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="app">
       <h1>Big Boss' Todos!</h1>
       <form>
         <FormControl>
@@ -47,7 +48,7 @@ function App() {
         Add Todo
       </Button>
       <FlipMove>
-        <ul>
+        <ul className="todo__ul">
         {todos.map(todo => (
          <Todo todo={todo} />
           ))}

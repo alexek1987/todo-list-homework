@@ -1,4 +1,9 @@
 .update__todo {
   display: flex;
   justify-content: space-between;
+
+}
+
+.add__btn {
+ margin-top: 6px !important;
 }

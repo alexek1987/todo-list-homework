@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Input, Modal ,Button, List, ListItem, ListItemText } from '@material-ui/core';
 import './Todo.css';
 import db from "./firebase"
-import DeleteIcon from '@material-ui/icons/Delete';
+import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import { makeStyles } from '@material-ui/core/styles';
 
 
@@ -96,7 +96,7 @@ function Todo(props) {
         >
         Update Todo
       </Button>
-        <DeleteIcon
+        <DeleteForeverIcon
           onClick={event =>
           db.collection('todos')
           .doc(props.todo.id)
