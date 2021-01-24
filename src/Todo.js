@@ -4,6 +4,7 @@ import './Todo.css';
 import db from "./firebase"
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import { makeStyles } from '@material-ui/core/styles';
+import { useQuote } from "./useQuote";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -22,24 +23,6 @@ const useStyles = makeStyles((theme) => ({
 function Todo(props) {
 
   const [quote, setQuote] = useState({});
-
-  useEffect(() => {
-    const fetchQuote = async () =>
-      await fetch(
-        `https://type.fit/api/quotes`
-      )
-        .then((result) => result.json())
-        .then((data) => {
-          const randomQuote = Math.floor(Math.random() * data.length)
-          console.log(data[randomQuote].text);
-            setQuote(data[randomQuote]);
-
-      });
-    fetchQuote();
-
-  }, []);
-
-
   const customStyle = useStyles();
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState();
