@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import './Todo.css';
 import Todo from './Todo.js';
-import { Button, FormControl, Input, InputLabel } from '@material-ui/core';
+import { Button, Input, InputLabel } from '@material-ui/core';
 import db from './firebase';
 import firebase from 'firebase';
 import FlipMove from 'react-flip-move';
@@ -34,10 +34,10 @@ function App() {
     <div className="app">
       <h1>Big Boss' Todos!</h1>
       <form>
-        <FormControl>
+
           <InputLabel>Write a Todo</InputLabel>
           <Input value={input} onChange={event => setInput(event.target.value)}/>
-        </FormControl>
+
       </form>
       <Button
         className="add__btn"

@@ -7,3 +7,15 @@
 .add__btn {
  margin-top: 6px !important;
 }
+
+.todo__li {
+ background-color: #F1F8FE;
+ border-radius: 3px;
+ padding: 10px !important;
+ margin-right: 30px !important;
+
+}
+
+.todo__ul {
+  margin-right: 30px;
+}

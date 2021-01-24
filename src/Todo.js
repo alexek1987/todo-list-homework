@@ -84,7 +84,7 @@ function Todo(props) {
     </Modal>
 
     <List className="todo__list">
-      <ListItem>
+      <ListItem className="todo__li">
         <ListItemText
           primary={props.todo.todo}
           secondary={quote.text + '- ' + quote.author}/>

@@ -4,9 +4,3 @@
 .app {
   text-align: center;
 }
-
-.todo__ul {
-  background-color: #F1F8FE;
-  width: 100vh;
-  border-radius: 15px;
-}
